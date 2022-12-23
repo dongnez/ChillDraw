@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP 
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+        -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../transition.css">
+        <title>ChillDraw</title>
+      </head>
+<body>
+
+    
+
+    <!--<div class="atras" onmouseenter="stopPainting()" onmouseleave="continuePainting()" >
+        <a href="../index.html" ><img src="../icons/Back.svg" alt="BACK"></a>
+    </div>
+    -->
+    <div id="settings" onmouseenter="stopPainting()" onmouseleave="continuePainting()" >
+        <img src="../icons/RuletaSetting.svg" alt="Settings">
+        <div class="menu">
+            <img id="save" src="../icons/download-circular-button.svg" alt="Save" onclick="saveImage()">
+            <button  class="btn" onclick="Limpiar()">Limpiar</button>
+            <input type="color" name="Coloritos" id="colores" value="#dbdbdb">
+            <!-- <button  class="btn" onclick="Cambiar()">Cambiar</button> -->      
+        </div>
+    </div>
+    
+
+    <div id="paleta" onmouseenter="stopPainting()" onmousedown="stopPainting()" onmouseleave="continuePainting()" ondrag="stopPainting()">
+
+        <ul id="paleta-nav">  
+            <li>
+                <img id="logo" src="../icons/paleta.svg" alt="Paleta" onclick="paletaOpen()">
+            </li>
+
+            <!--Botones de pinceles-->
+            <li  class="paleta-item">
+                <span   class="link-text"> 
+                    <div>
+                    <button onclick="Bts()" class="button"  >BTS</button>
+                    </div>
+                    </span>
+            </li>
+            
+            <li  class="paleta-item">
+                <span   class="link-text"> 
+                    <div>
+                        <button onclick="Cuadrados()" class="button" >Cuadrados</button>
+                    </div>
+                </span>
+            </li>
+
+            
+            <li  class="paleta-item">
+                <span  class="link-text"> 
+                    <div>
+                    <button onclick="Flores()" class="button"  >Flores</button>
+                    </div>
+                    </span>
+            </li>
+
+            
+            <li  class="paleta-item">
+                <span  class="link-text"> 
+                    <div>
+                    <button onclick="selectEmoji()" class="button">Emojis</button>
+                    </div>
+                    </span>
+            </li>
+
+            <li  class="paleta-item">
+                <span  class="link-text"> 
+                    <div>
+                    <button onclick="selectParticles()" class="button">Particulas</button>
+                    </div>
+                    </span>
+            </li> 
+
+            <li  class="paleta-item">
+                <span  class="link-text"> 
+                    <div>
+                    <button onclick="selectCircles()" class="button">Circulos</button>
+                    </div>
+                    </span>
+            </li>
+
+        </ul>
+
+        <script src="script.js"></script>
+    </div>
+    
+    <canvas id="canvas1" ></canvas>
+    
+    <script src="chillDraw.js"></script>
+
+    </script>
+</body>
+</html>
